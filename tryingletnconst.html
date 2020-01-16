@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Checking let and const</title>
+<body>
+
+<p id="para1"></p>
+
+<p id="para2"></p>
+
+<p>Willl show error as const variable is overrided, error below</p>
+<p id="para3"></p>
+
+<p id="para4"></p>
+
+<script>
+
+var choc1 = "kitkat";
+{	
+ 	let choc1 = "kitkat";
+
+}
+
+try {
+  const choc2 = "perk";
+  choc2 = 'dairymilk';
+}
+  
+catch(err){
+
+	document.getElementById("para3").innerHTML = err;
+
+}
+
+
+var choc2 = "dairymilk"
+eat();
+function eat(){
+	var choc3 = 'munch'
+	//document.getElementById("para2").innerHTML = choc1
+
+
+}
+
+document.getElementById("para1").innerHTML = choc1;
+
+document.getElementById("para2").innerHTML = "after using let block "+choc1;
+
+//document.getElementById("para3").innerHTML = chco;
+
+</script>
+
+</body>
+</html>
+
