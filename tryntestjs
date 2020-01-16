@@ -1,0 +1,61 @@
+function b(){
+   console.log("first",x);
+   var x = 8;
+   console.log("second",x);
+}
+var x = 6;
+b()
+console.log("third",x);
+
+
+................................................................
+
+
+function b()
+{
+    var a = 8;
+    function c()
+    {
+        let a = 9;
+        console.log("Hello",a) // output 9
+    }
+   c();
+    console.log("Hey",a) // output 8
+
+}
+
+b();
+
+console.log("Hi",a) //output 8
+
+
+......................................................................
+
+// Try edit message
+function a()
+{
+    A = 5;
+    console.log(A,"#")
+    function b()
+    {
+        A=6;
+        console.log(A,"##")
+    }
+    function c()
+    {
+        A = 7;
+        console.log(A, "###")
+    }
+    b();
+    c();
+}
+a();
+console.log(A, "final")
+
+O/P :- 
+
+5#
+6##
+7###
+7final
+.........................................................
