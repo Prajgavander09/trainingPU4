@@ -4,20 +4,36 @@
 
 <h2>JavaScript Scope</h2>
 
-<p>Outside myFunction() carName is undefined.</p>
+<p Outside myFunction() carName is undefined.></p>
 
+<p>global variable || trying global scope</p>
 <p id="try1"></p>
 
+<p >global variable || trying local scope || in function</p>
 <p id="try2"></p>
 
-<script>
-myFunction();
+<p >local variable || trying global scope || outside function</p>
+<p id="try3"> </p>
 
+<p >local variable || trying local scope || in function</p>
+<p id="try4"></p>
+
+<script>
+
+
+var car1 = "benz"
+myFunction();
+//var car2 = 'audi'
 function myFunction() {
-  var carName = "Volvo";
-  document.getElementById("try1").innerHTML = typeof carName + " " + carName;
+  var car2 = "Volvo";
+  //var car4 = 'jaguar'
+  document.getElementById("try4").innerHTML = car2;
+  document.getElementById("try2").innerHTML = car1;
 }
-document.getElementById("try2").innerHTML = typeof carName;
+
+document.getElementById("try1").innerHTML = car1;
+
+document.getElementById("try3").innerHTML = typeof car2;
 </script>
 
 </body>
