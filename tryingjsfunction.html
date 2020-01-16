@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <h2>JavaScript Function</h2>
+  <body>
+    <p>Simple Function</p>
+    <p id="try1"></p>
+
+    <p >Function Expression/ Anonymous Function</p>
+    <p id="try2"></p>
+
+    <p >Immediate Invoking Function<FIGURE></FIGURE></p>
+    <p id="try3"> </p>
+    <p id="try4"> </p>
+
+    <p >Arrow Function</p>
+    <p id="try5"></p>
+
+    <p >Inner Function/ Nested Function</p>
+    <p id="try6"></p>
+  </body>
+  <script>
+    function substract(a,b) {
+      var result = a - b ;
+      document.getElementById("try1").innerHTML = result;
+
+    }
+    substract(10,7);
+
+    //Anonymous func as they dont have name after function
+    var z = function(x,y) {
+      return x+y;
+    }
+    document.getElementById("try2").innerHTML = z(5,20);
+
+    document.getElementById("try3").innerHTML = (function() {
+      return "Without parameter IIF";
+    })();
+    
+    var ftype = "With parameter IIF"
+    document.getElementById("try4").innerHTML = (function(f) {
+      return f;})(ftype);
+
+    var power = (x,y) => {
+      return x**y;
+    }
+    document.getElementById("try5").innerHTML = power(5,3);
+
+    function divideinparts(value1) {
+      var x = 5;
+      function dino(input) {
+        return value1/input;
+      }
+      return dino(x);
+    }
+    document.getElementById("try6").innerHTML = divideinparts(15);
+  </script>
+</html>
+
