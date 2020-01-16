@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html>
-<title>Checking let and const</title>
-<body>
+  <title>Checking let and const</title>
+  <h2>Checking let, const, var</h2>
+  <body>
 
-<p id="para1"></p>
+    global var<p id="para1"></p> 
+    global <p id="para2"></p><br>
 
-<p id="para2"></p>
+    <p>Willl show error as const variable is overrided, error below</p>
+    <p id="para3"></p><br>
 
-<p>Willl show error as const variable is overrided, error below</p>
-<p id="para3"></p>
+    <p>Now calling inside function </p>
 
-<p id="para4"></p>
+    var <p id="para4"></p>
+    let<p id="para5"></p>
+    const<p id="para6"></p>
 
-<script>
+    <p id="para7"></p>
+    <p id="para8"></p>
 
-var choc1 = "kitkat";
-{	
- 	let choc1 = "kitkat";
+    <script>
 
-}
+    var choc1 = "kitkat";
+    {   
+        let choc1 = "kitkat";
 
-try {
-  const choc2 = "perk";
-  choc2 = 'dairymilk';
-}
-  
-catch(err){
+    }
 
-	document.getElementById("para3").innerHTML = err;
+    try {
 
-}
+      const choc2 = "perk";
+      choc2 = 'dairymilk';
+    }
+      
+    catch(err) {
+
+        document.getElementById("para3").innerHTML = err;
+
+    }
+
+    function eat() {
+
+        var choc1 = 'munch1';
+        let choc2 = 'munch2';
+        const choc3 = 'munch3';
+
+        document.getElementById("para4").innerHTML = choc1;
+        document.getElementById("para5").innerHTML = choc2;
+        document.getElementById("para6").innerHTML = choc3;
+
+    }
+    eat(); //calling function
 
 
-var choc2 = "dairymilk"
-eat();
-function eat(){
-	var choc3 = 'munch'
-	//document.getElementById("para2").innerHTML = choc1
+    //document.getElementById("para3").innerHTML = choc;
 
-
-}
-
-document.getElementById("para1").innerHTML = choc1;
-
-document.getElementById("para2").innerHTML = "after using let block "+choc1;
-
-//document.getElementById("para3").innerHTML = chco;
-
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
 
