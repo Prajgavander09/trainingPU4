@@ -1,0 +1,28 @@
+<html>
+  <script>
+    function mouse(brand,color,size,type) {
+      this.brand = brand;
+      this.color = color;
+      this.size = size;
+      this.type = type;
+    }
+    mouse1 = new mouse("dell","black","5cm","laser");
+    mouse2 = new mouse("logitech","black","7cm","optical");
+    mouse3 = new mouse("apple","white","4cm","optical");
+    mouse4 = new mouse("dell","white","5cm","laser");
+
+    mouse.prototype.button = 3
+
+    mouse.prototype.leftClick = function() {
+      return "do Select Operation";
+    }
+
+    mouse.prototype.rightClick = function() {
+      return "do Open Option";
+    }
+
+    console.log(mouse1.brand , mouse1.color, mouse1.size, mouse1.leftClick() , mouse1.button )
+    console.log(mouse2.brand , mouse2.size , mouse2.type, mouse2.leftClick() , mouse2.button )
+
+  </script>
+</html>
